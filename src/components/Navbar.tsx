@@ -93,6 +93,9 @@ export default function Navbar() {
   const altLocale = isEs ? 'en' : 'es';
   const altLabel = isEs ? 'EN' : 'ES';
 
+  const textColor = scrolled ? 'text-[#021939]' : 'text-white';
+  const borderColor = scrolled ? 'border-[#021939]/20' : 'border-white/40';
+
   // ---------- Dropdown hover helpers (desktop) ----------
   const openDropdown = useCallback(() => {
     if (dropdownTimeoutRef.current) {
@@ -158,7 +161,7 @@ export default function Navbar() {
               alt="OASIS"
               width={160}
               height={40}
-              className="h-10 w-auto"
+              className={`h-10 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`}
               priority
             />
           </Link>
@@ -169,7 +172,7 @@ export default function Navbar() {
             <li>
               <Link
                 href={navLinks[0].href}
-                className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium text-[#021939] transition-colors hover:text-[#FFC63E]"
+                className={`inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium ${textColor} transition-colors hover:text-[#FFC63E]`}
               >
                 {navLinks[0].label}
               </Link>
@@ -187,7 +190,7 @@ export default function Navbar() {
                 onClick={() => setProgramsOpen((prev) => !prev)}
                 aria-expanded={programsOpen}
                 aria-haspopup="true"
-                className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium text-[#021939] transition-colors hover:text-[#FFC63E]"
+                className={`inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium ${textColor} transition-colors hover:text-[#FFC63E]`}
               >
                 {t('programs')}
                 {chevronDown}
@@ -221,7 +224,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium text-[#021939] transition-colors hover:text-[#FFC63E]"
+                  className={`inline-flex min-h-[44px] items-center rounded-md px-3 py-2 text-sm font-medium ${textColor} transition-colors hover:text-[#FFC63E]`}
                 >
                   {link.label}
                 </Link>
@@ -234,7 +237,7 @@ export default function Navbar() {
             {/* Language toggle */}
             <Link
               href={`/${altLocale}`}
-              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md border border-[#021939]/20 px-3 py-2 text-sm font-semibold text-[#021939] transition-colors hover:border-[#FFC63E] hover:text-[#FFC63E]"
+              className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md border ${borderColor} px-3 py-2 text-sm font-semibold ${textColor} transition-colors hover:border-[#FFC63E] hover:text-[#FFC63E]`}
               aria-label={isEs ? 'Switch to English' : 'Cambiar a Espa\u00f1ol'}
             >
               {altLabel}
@@ -245,7 +248,7 @@ export default function Navbar() {
               type="button"
               onClick={() => setMobileOpen(true)}
               aria-label={isEs ? 'Abrir men\u00fa' : 'Open menu'}
-              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md text-[#021939] transition-colors hover:text-[#FFC63E] lg:hidden"
+              className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md ${textColor} transition-colors hover:text-[#FFC63E] lg:hidden`}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
