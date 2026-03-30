@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Home",
+    "programs": "Programs",
+    "hub": "The Hub",
+    "partners": "Partners",
+    "contact": "Contact Us",
+    "langToggle": "ES"
+  },
+  "hero": {
+    "tagline": "A Place of Opportunity",
+    "subtitle": "Connecting San Juan residents with employment, training, entrepreneurship, childcare, and family support to build a better future.",
+    "cta": "Discover how we can help you"
+  },
+  "home": {
+    "whatIsTitle": "What is OASIS 360?",
+    "whatIsText": "OASIS 360 is a comprehensive initiative based in Villa Prades, San Juan, that connects residents of ZIP codes 00923 and 00924 with employment, training, entrepreneurship, childcare, and family support services. Funded by the U.S. Economic Development Administration (EDA), the initiative brings together multiple organizations to create real pathways to economic mobility.",
+    "programsTitle": "Our Programs",
+    "learnMore": "Learn more",
+    "impactTitle": "Our Impact",
+    "hubTitle": "The OASIS Hub",
+    "hubText": "Our community center in Villa Prades brings all services together under one roof.",
+    "hubEducation": "Vimenti Charter School (K-12)",
+    "hubWorkforce": "300+ individuals trained annually",
+    "hubHealthcare": "4,000+ patients at Vidalús Clinic",
+    "hubEntrepreneurship": "100+ entrepreneurs at Project Makers",
+    "hubYouth": "550+ children & youth in after-school programs",
+    "partnersTitle": "Our Partners",
+    "ctaTitle": "Need help?",
+    "ctaSubtitle": "Get in touch and we'll connect you with the right program for you.",
+    "ctaButton": "Contact Us"
+  },
+  "stats": {
+    "jobs": "quality job placements",
+    "families": "families served",
+    "communities": "communities",
+    "residents": "residents in service area"
+  },
+  "programs": {
+    "mejorEmpleo": {
+      "name": "Better Jobs for Me",
+      "tagline": "Connecting residents with quality jobs through personalized training and mentorship.",
+      "partner": "Vimenti (with Jobs for the Future)",
+      "challengeTitle": "The Challenge",
+      "challenge": "Average annual income in ZIP 00923/00924 is $19,318 — 20% below PR average. Only 58% of adults have a high school diploma or GED, and just 9% have a college education.",
+      "howTitle": "How It Works",
+      "step1": "Career orientation and exploration",
+      "step2": "Customized training with employer partners",
+      "step3": "Mentorship and interview preparation",
+      "step4": "Job placement and post-placement support",
+      "servicesTitle": "What You Get",
+      "services": [
+        "Personalized work plans",
+        "Customized training programs",
+        "Mentorship and interview coordination",
+        "Placement in quality positions ($19/hr+, full-time)",
+        "Post-placement follow-up and retention support",
+        "Connection to complementary services (childcare, transportation)"
+      ],
+      "audienceTitle": "Who It's For",
+      "audience": "Residents of ZIP codes 00923 and 00924 seeking quality employment or better job opportunities.",
+      "cta": "Start here"
+    },
+    "emprendimiento": {
+      "name": "E3 Entrepreneurship",
+      "tagline": "Supporting entrepreneurs from idea to business growth.",
+      "partner": "Project Makers",
+      "challengeTitle": "The Challenge",
+      "challenge": "25% of financial activity in the area is informal. 88% of PR business owners report difficulties obtaining permits. Only 38% of men and 20% of women are considered financially literate.",
+      "howTitle": "How It Works",
+      "step1": "StartUp — Business idea development, registration, initial permits",
+      "step2": "Support — Technical assistance, financial literacy, access to capital",
+      "step3": "Grow — Business expansion, employment creation",
+      "step4": "Alumni — Ongoing mentorship network and advanced opportunities",
+      "servicesTitle": "What You Get",
+      "services": [
+        "Business incubation and acceleration",
+        "Permit navigation",
+        "Access to capital networks",
+        "Financial literacy training",
+        "Peer network of 100+ entrepreneurs"
+      ],
+      "audienceTitle": "Who It's For",
+      "audience": "Entrepreneurs and aspiring business owners in ZIP codes 00923/00924.",
+      "cta": "Start here"
+    },
+    "comunidadDeCuidado": {
+      "name": "Caring Community",
+      "tagline": "Removing employment barriers by providing access to childcare, elder care, and after-school programs.",
+      "partner": "PSI",
+      "challengeTitle": "The Challenge",
+      "challenge": "71% of residents with children report lack of childcare as a significant employment barrier. High childcare costs prevent 29% of the population from transitioning to full-time jobs.",
+      "howTitle": "How It Works",
+      "step1": "Care needs identification",
+      "step2": "Connection to providers and vouchers",
+      "step3": "Creation of new care slots",
+      "step4": "Ongoing support and monitoring",
+      "servicesTitle": "What You Get",
+      "services": [
+        "After-school slots (314→600 by Year 5)",
+        "Childcare voucher enrollment",
+        "Informal care stipend program",
+        "Overnight and weekend childcare options",
+        "Elder care support",
+        "New care business creation in the community"
+      ],
+      "audienceTitle": "Who It's For",
+      "audience": "Families needing access to childcare, elder care, or after-school programs in order to work.",
+      "cta": "Start here"
+    },
+    "navegadorFamiliar": {
+      "name": "Family Navigator",
+      "tagline": "Your family at the center. Dedicated navigators helping you overcome barriers and achieve stability.",
+      "partner": "Vimenti",
+      "challengeTitle": "The Challenge",
+      "challenge": "Over 50% of families in ZIP 00923/00924 live below the poverty line. Nearly 30% of households are led by single mothers. Deep mistrust toward institutional systems due to decades of fragmented services.",
+      "howTitle": "How It Works",
+      "step1": "Family identification — Pre-screening in 7 schools (K-3)",
+      "step2": "Needs assessment — 8 key indicators",
+      "step3": "Family action plan — Co-created plans with specific goals",
+      "step4": "Case management and referrals — Continuous support and barrier removal",
+      "servicesTitle": "What You Get",
+      "services": [
+        "Dedicated Family Navigator",
+        "Personalized family action plan",
+        "Referrals to employment, training, childcare, health, and housing services",
+        "Connection across all OASIS programs",
+        "Individualized case management or on-demand navigation"
+      ],
+      "audienceTitle": "Who It's For",
+      "audience": "Families in ZIP codes 00923/00924 needing comprehensive support to overcome barriers to stability.",
+      "cta": "Start here"
+    },
+    "empoderados": {
+      "name": "Empowered for Employment (E2)",
+      "tagline": "Changing the rules of the game so that working doesn't mean losing your benefits.",
+      "partner": "IDJ (Instituto del Desarrollo de la Juventud)",
+      "challengeTitle": "The Challenge",
+      "challenge": "60% of non-working families cite fear of losing government benefits as their primary barrier to employment. Families earning above ~$29,000 lose government assistance eligibility, creating employment disincentives — the \"benefit cliff.\"",
+      "howTitle": "How It Works",
+      "step1": "Research on benefit cliff dynamics",
+      "step2": "Community advisory council — Residents designing policy from lived experience",
+      "step3": "Pilot programs — \"El Poder de Saber\" and Family Development Accounts",
+      "step4": "Narrative change — Campaign on benefit transitions",
+      "servicesTitle": "What You Get",
+      "services": [
+        "Understanding of how employment affects your benefits",
+        "Access to pilot programs",
+        "Community advisory participation",
+        "Policy advocacy for systemic change"
+      ],
+      "audienceTitle": "Who It's For",
+      "audience": "Families fearing benefit loss when entering employment and those seeking to change the policies creating these barriers.",
+      "cta": "Start here"
+    }
+  },
+  "hub": {
+    "title": "The OASIS Hub",
+    "subtitle": "Our community center in Villa Prades, San Juan",
+    "description": "The OASIS Hub is the heart of our initiative — a physical space where all services and programs converge under one roof, facilitating access to opportunities for the entire community.",
+    "servicesTitle": "Services at the Hub",
+    "education": "K-12 Education",
+    "educationDesc": "Vimenti Charter School offers quality education from kindergarten through 12th grade.",
+    "workforce": "Workforce Development",
+    "workforceDesc": "Over 300 individuals trained annually in market-demanded skills.",
+    "healthcare": "Community Health",
+    "healthcareDesc": "Vidalús Community Health Clinic serves over 4,000 patients annually.",
+    "entrepreneurship": "Entrepreneurship",
+    "entrepreneurshipDesc": "Project Makers supports 100+ entrepreneurs with incubation and acceleration.",
+    "youth": "Youth Programs",
+    "youthDesc": "Over 550 children and youth participate in after-school programs.",
+    "visitTitle": "Visit Us",
+    "address": "Villa Prades, San Juan, Puerto Rico",
+    "zipCodes": "ZIP Codes: 00923, 00924"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Organizations committed to transforming our community",
+    "vimentiDesc": "Family Navigator, Better Jobs for Me, Charter School K-12. Vimenti leads comprehensive employment and family support programs.",
+    "projectMakersDesc": "E3 Entrepreneurship incubator and accelerator. Project Makers supports entrepreneurs from idea to business growth.",
+    "idjDesc": "Research, public policy, and benefit cliff programs. IDJ works to change the rules preventing economic progress.",
+    "goodwillDesc": "Adult education and workforce development referrals. Goodwill's Excel Center offers diploma and training opportunities.",
+    "psiDesc": "Overall coordination, governance, and Caring Community program. PSI leads the OASIS 360 initiative and its operations.",
+    "ctaTitle": "Want to partner?",
+    "ctaText": "If your organization is interested in collaborating with OASIS 360, we'd love to talk.",
+    "ctaButton": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you find the right program for you and your family.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "(787) 000-0000",
+    "programLabel": "Program of interest",
+    "programPlaceholder": "Select a program",
+    "programOptions": {
+      "mejorEmpleo": "Better Jobs for Me",
+      "emprendimiento": "E3 Entrepreneurship",
+      "comunidadDeCuidado": "Caring Community",
+      "navegadorFamiliar": "Family Navigator",
+      "empoderados": "Empowered for Employment",
+      "other": "Other / Not sure"
+    },
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submit": "Send message",
+    "successTitle": "Message sent!",
+    "successText": "We'll be in touch soon."
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "programs": "Programs",
+    "attribution": "This initiative is funded by the U.S. Economic Development Administration (EDA) through the RECOMPETE Plan — Grant ED24HDQ0G0516.",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "programs": "Programas",
+    "hub": "El Hub",
+    "partners": "Socios",
+    "contact": "Contáctanos",
+    "langToggle": "EN"
+  },
+  "hero": {
+    "tagline": "Un Lugar de Oportunidad",
+    "subtitle": "Conectamos a residentes de San Juan con empleo, formación, emprendimiento, cuido y apoyo familiar para construir un futuro mejor.",
+    "cta": "Descubre cómo podemos ayudarte"
+  },
+  "home": {
+    "whatIsTitle": "¿Qué es OASIS 360?",
+    "whatIsText": "OASIS 360 es una iniciativa integral basada en Villa Prades, San Juan, que conecta a residentes de los códigos postales 00923 y 00924 con servicios de empleo, formación, emprendimiento, cuido y apoyo familiar. Financiada por la Administración de Desarrollo Económico de los EE.UU. (EDA), la iniciativa reúne a múltiples organizaciones para crear caminos reales hacia la movilidad económica.",
+    "programsTitle": "Nuestros Programas",
+    "learnMore": "Conoce más",
+    "impactTitle": "Nuestro Impacto",
+    "hubTitle": "El Hub OASIS",
+    "hubText": "Nuestro centro comunitario en Villa Prades reúne todos los servicios bajo un mismo techo.",
+    "hubEducation": "Escuela Charter Vimenti (K-12)",
+    "hubWorkforce": "300+ individuos capacitados anualmente",
+    "hubHealthcare": "4,000+ pacientes en Clínica Vidalús",
+    "hubEntrepreneurship": "100+ emprendedores en Project Makers",
+    "hubYouth": "550+ niños y jóvenes en programas extracurriculares",
+    "partnersTitle": "Nuestros Socios",
+    "ctaTitle": "¿Necesitas ayuda?",
+    "ctaSubtitle": "Comunícate con nosotros y te conectamos con el programa adecuado para ti.",
+    "ctaButton": "Contáctanos"
+  },
+  "stats": {
+    "jobs": "empleos de calidad",
+    "families": "familias atendidas",
+    "communities": "comunidades",
+    "residents": "residentes en el área"
+  },
+  "programs": {
+    "mejorEmpleo": {
+      "name": "Mejor Empleo para Mí",
+      "tagline": "Conectamos residentes con trabajos de calidad a través de formación personalizada y mentoría.",
+      "partner": "Vimenti (con Jobs for the Future)",
+      "challengeTitle": "El Desafío",
+      "challenge": "El ingreso anual promedio en los códigos postales 00923/00924 es de $19,318 — 20% por debajo del promedio de PR. Solo el 58% de los adultos tienen diploma de escuela superior o GED, y apenas el 9% tiene educación universitaria.",
+      "howTitle": "¿Cómo Funciona?",
+      "step1": "Orientación y exploración de carrera",
+      "step2": "Formación personalizada con empleadores",
+      "step3": "Mentoría y preparación para entrevistas",
+      "step4": "Colocación laboral y seguimiento",
+      "servicesTitle": "¿Qué Recibes?",
+      "services": [
+        "Planes de trabajo personalizados",
+        "Programas de formación a medida",
+        "Mentoría y coordinación de entrevistas",
+        "Colocación en empleos de calidad ($19/hr+, tiempo completo)",
+        "Seguimiento post-colocación y apoyo de retención",
+        "Conexión con servicios complementarios (cuido, transporte)"
+      ],
+      "audienceTitle": "¿Para Quién Es?",
+      "audience": "Residentes de los códigos postales 00923 y 00924 que buscan empleo de calidad o mejorar sus oportunidades laborales.",
+      "cta": "Comienza aquí"
+    },
+    "emprendimiento": {
+      "name": "Emprendimiento E3",
+      "tagline": "Apoyamos a emprendedores desde la idea hasta el crecimiento de su negocio.",
+      "partner": "Project Makers",
+      "challengeTitle": "El Desafío",
+      "challenge": "El 25% de la actividad financiera del área es informal. El 88% de los dueños de negocios en PR reportan dificultades con permisos. Solo el 38% de los hombres y el 20% de las mujeres son considerados financieramente alfabetizados.",
+      "howTitle": "¿Cómo Funciona?",
+      "step1": "StartUp — Desarrollo de idea, registro e permisos iniciales",
+      "step2": "Support — Asistencia técnica, educación financiera, acceso a capital",
+      "step3": "Grow — Expansión del negocio, creación de empleos",
+      "step4": "Alumni — Red de mentoría y oportunidades avanzadas",
+      "servicesTitle": "¿Qué Recibes?",
+      "services": [
+        "Incubación y aceleración de negocios",
+        "Navegación de permisos",
+        "Acceso a redes de capital",
+        "Formación en educación financiera",
+        "Red de 100+ emprendedores"
+      ],
+      "audienceTitle": "¿Para Quién Es?",
+      "audience": "Emprendedores y aspirantes a dueños de negocio en los códigos postales 00923/00924.",
+      "cta": "Comienza aquí"
+    },
+    "comunidadDeCuidado": {
+      "name": "Comunidad de Cuidado",
+      "tagline": "Eliminamos las barreras al empleo brindando acceso a cuido de niños, personas mayores y programas extracurriculares.",
+      "partner": "PSI",
+      "challengeTitle": "El Desafío",
+      "challenge": "El 71% de los residentes con hijos reportan la falta de cuido como barrera significativa para el empleo. Los altos costos de cuido impiden que el 29% de la población haga la transición a empleos a tiempo completo.",
+      "howTitle": "¿Cómo Funciona?",
+      "step1": "Identificación de necesidades de cuido",
+      "step2": "Conexión con proveedores y vouchers",
+      "step3": "Creación de nuevos espacios de cuido",
+      "step4": "Apoyo continuo y monitoreo",
+      "servicesTitle": "¿Qué Recibes?",
+      "services": [
+        "Espacios extracurriculares (314→600 para Año 5)",
+        "Inscripción en vouchers de cuido infantil",
+        "Programa de estipendio para cuido informal",
+        "Opciones de cuido nocturno y de fin de semana",
+        "Apoyo de cuido para personas mayores",
+        "Creación de nuevos negocios de cuido en la comunidad"
+      ],
+      "audienceTitle": "¿Para Quién Es?",
+      "audience": "Familias que necesitan acceso a cuido de niños, personas mayores o programas extracurriculares para poder trabajar.",
+      "cta": "Comienza aquí"
+    },
+    "navegadorFamiliar": {
+      "name": "Navegador Familiar",
+      "tagline": "Tu familia al centro. Navegadores dedicados que te ayudan a superar barreras y alcanzar estabilidad.",
+      "partner": "Vimenti",
+      "challengeTitle": "El Desafío",
+      "challenge": "Más del 50% de las familias en los códigos postales 00923/00924 viven bajo el nivel de pobreza. Casi el 30% de los hogares son liderados por madres solteras. Existe una profunda desconfianza hacia los sistemas institucionales.",
+      "howTitle": "¿Cómo Funciona?",
+      "step1": "Identificación familiar — Cuestionario en 7 escuelas (K-3)",
+      "step2": "Evaluación de necesidades — 8 indicadores clave",
+      "step3": "Plan de acción familiar — Planes co-creados con metas específicas",
+      "step4": "Manejo de caso y referidos — Apoyo continuo y eliminación de barreras",
+      "servicesTitle": "¿Qué Recibes?",
+      "services": [
+        "Navegador Familiar dedicado",
+        "Plan de acción familiar personalizado",
+        "Referidos a servicios de empleo, formación, cuido, salud y vivienda",
+        "Conexión con todos los programas de OASIS",
+        "Manejo de caso individualizado o navegación bajo demanda"
+      ],
+      "audienceTitle": "¿Para Quién Es?",
+      "audience": "Familias en los códigos postales 00923/00924 que necesitan apoyo integral para superar barreras hacia la estabilidad.",
+      "cta": "Comienza aquí"
+    },
+    "empoderados": {
+      "name": "Empoderados para el Empleo (E2)",
+      "tagline": "Cambiando las reglas del juego para que trabajar no signifique perder tus beneficios.",
+      "partner": "IDJ (Instituto del Desarrollo de la Juventud)",
+      "challengeTitle": "El Desafío",
+      "challenge": "El 60% de las familias que no trabajan citan el miedo a perder beneficios gubernamentales como su barrera principal. Familias que ganan más de ~$29,000 pierden elegibilidad para asistencia, creando desincentivos al empleo — el \"benefit cliff\".",
+      "howTitle": "¿Cómo Funciona?",
+      "step1": "Investigación sobre dinámicas del \"benefit cliff\"",
+      "step2": "Consejo asesor comunitario — Residentes diseñando política pública",
+      "step3": "Programas piloto — \"El Poder de Saber\" y Cuentas de Desarrollo Familiar",
+      "step4": "Cambio de narrativa — Campaña sobre transición de beneficios",
+      "servicesTitle": "¿Qué Recibes?",
+      "services": [
+        "Comprensión de cómo el empleo afecta tus beneficios",
+        "Acceso a programas piloto",
+        "Participación en consejo asesor comunitario",
+        "Abogacía por cambio sistémico de políticas"
+      ],
+      "audienceTitle": "¿Para Quién Es?",
+      "audience": "Familias que temen perder beneficios al ingresar al empleo y quienes buscan cambiar las políticas que crean esas barreras.",
+      "cta": "Comienza aquí"
+    }
+  },
+  "hub": {
+    "title": "El Hub OASIS",
+    "subtitle": "Nuestro centro comunitario en Villa Prades, San Juan",
+    "description": "El Hub OASIS es el corazón de nuestra iniciativa — un espacio físico donde convergen todos los servicios y programas bajo un mismo techo, facilitando el acceso a oportunidades para toda la comunidad.",
+    "servicesTitle": "Servicios en el Hub",
+    "education": "Educación K-12",
+    "educationDesc": "Escuela Charter Vimenti ofrece educación de calidad desde kínder hasta grado 12.",
+    "workforce": "Desarrollo Laboral",
+    "workforceDesc": "Más de 300 individuos capacitados anualmente en habilidades demandadas por el mercado.",
+    "healthcare": "Salud Comunitaria",
+    "healthcareDesc": "Clínica Comunitaria Vidalús atiende a más de 4,000 pacientes anualmente.",
+    "entrepreneurship": "Emprendimiento",
+    "entrepreneurshipDesc": "Project Makers apoya a más de 100 emprendedores con incubación y aceleración.",
+    "youth": "Programas Juveniles",
+    "youthDesc": "Más de 550 niños y jóvenes participan en programas extracurriculares.",
+    "visitTitle": "Visítanos",
+    "address": "Villa Prades, San Juan, Puerto Rico",
+    "zipCodes": "Códigos Postales: 00923, 00924"
+  },
+  "partners": {
+    "title": "Nuestros Socios",
+    "subtitle": "Organizaciones comprometidas con la transformación de nuestra comunidad",
+    "vimentiDesc": "Navegador Familiar, Mejor Empleo para Mí, Escuela Charter K-12. Vimenti lidera programas de empleo y apoyo familiar integrales.",
+    "projectMakersDesc": "Incubadora y aceleradora de emprendimiento E3. Project Makers apoya a emprendedores desde la idea hasta el crecimiento de su negocio.",
+    "idjDesc": "Investigación, política pública y programas sobre el \"benefit cliff\". IDJ trabaja para cambiar las reglas que impiden el progreso económico.",
+    "goodwillDesc": "Educación para adultos y referidos de desarrollo laboral. El Excel Center de Goodwill ofrece oportunidades de diploma y formación.",
+    "psiDesc": "Coordinación general, gobernanza y programa Comunidad de Cuidado. PSI lidera la iniciativa OASIS 360 y sus operaciones.",
+    "ctaTitle": "¿Quieres ser socio?",
+    "ctaText": "Si tu organización está interesada en colaborar con OASIS 360, nos encantaría conversar.",
+    "ctaButton": "Contáctanos"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte a encontrar el programa adecuado para ti y tu familia.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre completo",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@correo.com",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "(787) 000-0000",
+    "programLabel": "Programa de interés",
+    "programPlaceholder": "Selecciona un programa",
+    "programOptions": {
+      "mejorEmpleo": "Mejor Empleo para Mí",
+      "emprendimiento": "Emprendimiento E3",
+      "comunidadDeCuidado": "Comunidad de Cuidado",
+      "navegadorFamiliar": "Navegador Familiar",
+      "empoderados": "Empoderados para el Empleo",
+      "other": "Otro / No estoy seguro"
+    },
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿Cómo podemos ayudarte?",
+    "submit": "Enviar mensaje",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Nos comunicaremos contigo pronto."
+  },
+  "footer": {
+    "quickLinks": "Enlaces Rápidos",
+    "programs": "Programas",
+    "attribution": "Esta iniciativa es financiada por la Administración de Desarrollo Económico de los Estados Unidos (EDA) a través del plan RECOMPETE — Subvención ED24HDQ0G0516.",
+    "rights": "Todos los derechos reservados."
+  }
+}
