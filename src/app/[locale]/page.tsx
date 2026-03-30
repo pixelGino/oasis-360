@@ -44,11 +44,13 @@ export default async function HomePage() {
       <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
         {/* Background video */}
         <video
-          src="/OASISrendering.mp4"
+          src="/OASISrendering-web.mp4"
+          poster="/hero-poster.jpg"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
@@ -104,13 +106,26 @@ export default async function HomePage() {
 
       {/* -- 2. What is OASIS 360 ------------------------------------- */}
       <section className="w-full bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
-            {t('home.whatIsTitle')}
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-gray-600">
-            {t('home.whatIsText')}
-          </p>
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/community-program.webp"
+                alt={isEn ? 'OASIS 360 community program' : 'Programa comunitario OASIS 360'}
+                width={600}
+                height={400}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
+                {t('home.whatIsTitle')}
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-gray-600">
+                {t('home.whatIsText')}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -149,7 +164,8 @@ export default async function HomePage() {
       {/* -- 5. The Hub ----------------------------------------------- */}
       <section className="w-full bg-oasis-teal-light py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
+          <div className="mx-auto mb-12 grid items-center gap-10 md:grid-cols-2">
+            <div>
             <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
               {t('home.hubTitle')}
             </h2>
@@ -159,6 +175,16 @@ export default async function HomePage() {
             <p className="mt-4 text-lg leading-relaxed text-oasis-navy/80">
               {t('home.hubText')}
             </p>
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/workforce-program.webp"
+                alt={isEn ? 'Workforce development at OASIS Hub' : 'Desarrollo laboral en el Hub OASIS'}
+                width={600}
+                height={400}
+                className="h-auto w-full object-cover"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
