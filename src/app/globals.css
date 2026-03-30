@@ -27,7 +27,7 @@
   --color-oasis-gold-light: var(--oasis-gold-light);
   --color-oasis-coral-light: var(--oasis-coral-light);
   --color-oasis-gray: var(--oasis-gray);
-  --font-sans: 'Inter', 'Aptos', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Aptos', 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   --rounded-oasis: 12px;
 }
 
