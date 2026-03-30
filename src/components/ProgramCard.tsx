@@ -44,7 +44,7 @@ export default function ProgramCard({
 }: ProgramCardProps) {
   return (
     <article
-      className={`group flex min-h-[280px] flex-col rounded-xl border-t-4 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${borderColorMap[color]}`}
+      className={`group flex min-h-[240px] flex-col rounded-xl border-t-4 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:min-h-[280px] sm:p-6 ${borderColorMap[color]}`}
     >
       {/* Icon */}
       <div
