@@ -8,7 +8,7 @@ const partners = [
   { name: 'Vimenti', logo: '/partners/vimenti.png', width: 120, height: 120 },
   { name: 'Project Makers', logo: '/partners/project-makers.png', width: 160, height: 70 },
   { name: 'IDJ', logo: '/partners/idj.png', width: 160, height: 72 },
-  { name: 'Goodwill / Excel Center', logo: null, width: 0, height: 0 },
+  { name: 'Goodwill / Excel Center', logo: '/partners/goodwill.png', width: 216, height: 92 },
   { name: 'PSI', logo: '/partners/psi.svg', width: 100, height: 48 },
 ];
 

@@ -6,7 +6,7 @@ const partners = [
   { name: 'Vimenti', descKey: 'vimentiDesc', accent: 'oasis-teal', logo: '/partners/vimenti.png' },
   { name: 'Project Makers', descKey: 'projectMakersDesc', accent: 'oasis-coral', logo: '/partners/project-makers.png' },
   { name: 'IDJ', descKey: 'idjDesc', accent: 'oasis-purple', logo: '/partners/idj.png' },
-  { name: 'Goodwill / Excel Center', descKey: 'goodwillDesc', accent: 'oasis-gold', logo: null },
+  { name: 'Goodwill / Excel Center', descKey: 'goodwillDesc', accent: 'oasis-gold', logo: '/partners/goodwill.png' },
   { name: 'PSI', descKey: 'psiDesc', accent: 'oasis-navy', logo: '/partners/psi.svg' },
 ] as const;
 
