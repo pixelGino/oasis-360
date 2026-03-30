@@ -109,33 +109,19 @@ export default async function HubPage({
             {t('visitCta')} &rarr;
           </Link>
 
-          {/* Map placeholder */}
-          <div className="mx-auto mt-10 flex h-64 max-w-lg items-center justify-center rounded-xl bg-oasis-gray shadow-inner">
-            <div className="flex flex-col items-center gap-3 text-oasis-navy/50">
-              {/* Pin icon */}
-              <svg
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                />
-              </svg>
-              <span className="text-sm font-medium">
-                {t('mapPlaceholder')}
-              </span>
-            </div>
+          {/* Google Map embed — Villa Prades area */}
+          <div className="mx-auto mt-10 max-w-2xl overflow-hidden rounded-xl shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3785.5!2d-66.023774!3d18.411379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spr!4v1711800000000"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={locale === 'es' ? 'Mapa de Villa Prades, San Juan' : 'Villa Prades, San Juan Map'}
+              className="w-full"
+            />
           </div>
         </div>
       </section>
