@@ -15,12 +15,12 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <section className="w-full bg-oasis-gold py-12 sm:py-16 md:py-20">
-      <div className="mx-auto flex max-w-3xl flex-col items-center px-8 text-center sm:px-10 md:px-6">
-        <h2 className="text-2xl font-bold text-oasis-navy sm:text-3xl md:text-4xl">
+      <div className="mx-auto flex max-w-3xl flex-col items-center px-10 text-center sm:px-12 md:px-6">
+        <h2 className="text-xl font-bold text-oasis-navy sm:text-3xl md:text-4xl">
           {title}
         </h2>
 
-        <p className="mt-3 text-base leading-relaxed text-oasis-navy/80 sm:mt-4 sm:text-lg md:text-xl">
+        <p className="mt-4 text-sm leading-loose text-oasis-navy/80 sm:mt-4 sm:text-base sm:leading-relaxed md:text-xl">
           {subtitle}
         </p>
 

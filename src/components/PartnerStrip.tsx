@@ -15,8 +15,8 @@ const partners = [
 export default function PartnerStrip({ title }: PartnerStripProps) {
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 md:px-6">
-        <h2 className="mb-8 text-center text-xl font-bold text-oasis-navy sm:mb-10 sm:text-2xl md:text-3xl">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 md:px-6">
+        <h2 className="mb-8 text-center text-lg font-bold text-oasis-navy sm:mb-10 sm:text-2xl md:text-3xl">
           {title}
         </h2>
 

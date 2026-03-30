@@ -42,7 +42,7 @@ export default function StatBar({ stats }: StatBarProps) {
       className="w-full bg-oasis-teal-light py-10 sm:py-12 md:py-16"
       aria-label="Key statistics"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-8 sm:gap-8 sm:px-10 md:grid-cols-4 md:gap-12 md:px-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-10 sm:gap-8 sm:px-12 md:grid-cols-4 md:gap-12 md:px-6">
         {stats.map((stat, index) => (
           <div
             key={stat.label}
