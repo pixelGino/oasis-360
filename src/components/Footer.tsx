@@ -55,7 +55,7 @@ export function Footer() {
                 alt="OASIS 360"
                 width={60}
                 height={60}
-                className="mb-4"
+                className="mb-4 brightness-0 invert"
               />
             </Link>
             <p className="text-sm leading-relaxed text-white/80">

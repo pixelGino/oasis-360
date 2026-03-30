@@ -85,9 +85,9 @@ export default function Navbar() {
   // ---------- Nav links config ----------
   const navLinks = [
     { href: `/${locale}`, label: t('home') },
-    { href: `/${locale}/${isEs ? 'el-hub' : 'the-hub'}`, label: t('hub') },
+    { href: `/${locale}/hub`, label: t('hub') },
     { href: `/${locale}/${isEs ? 'socios' : 'partners'}`, label: t('partners') },
-    { href: `/${locale}/${isEs ? 'contactanos' : 'contact'}`, label: t('contact') },
+    { href: `/${locale}/${isEs ? 'contacto' : 'contact'}`, label: t('contact') },
   ];
 
   const altLocale = isEs ? 'en' : 'es';

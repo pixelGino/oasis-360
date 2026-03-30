@@ -26,7 +26,7 @@ export default function Hero({
             alt="OASIS 360"
             width={150}
             height={150}
-            className="mb-8"
+            className="mb-8 brightness-0 invert"
             priority
           />
         )}
