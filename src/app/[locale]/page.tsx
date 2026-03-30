@@ -64,7 +64,7 @@ export default async function HomePage() {
             alt="OASIS 360"
             width={160}
             height={160}
-            className="mb-8 brightness-0 invert"
+            className="mb-8 hidden brightness-0 invert md:block"
             priority
           />
 
