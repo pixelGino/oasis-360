@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { type ReactNode } from 'react';
 
 type BrandColor = 'gold' | 'coral' | 'teal' | 'purple' | 'navy';
 
@@ -7,7 +8,7 @@ interface ProgramCardProps {
   tagline: string;
   href: string;
   color: BrandColor;
-  icon: string;
+  icon: ReactNode;
 }
 
 const borderColorMap: Record<BrandColor, string> = {
@@ -47,7 +48,7 @@ export default function ProgramCard({
     >
       {/* Icon */}
       <div
-        className={`mb-4 flex h-14 w-14 items-center justify-center rounded-lg text-2xl ${iconBgMap[color]}`}
+        className={`mb-4 flex h-14 w-14 items-center justify-center rounded-lg ${iconBgMap[color]}`}
         aria-hidden="true"
       >
         {icon}

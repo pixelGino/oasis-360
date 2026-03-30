@@ -8,17 +8,17 @@ import CTABanner from '@/components/CTABanner';
 /*  Slug → translation-key mapping                                     */
 /* ------------------------------------------------------------------ */
 
-const programMap: Record<string, { key: string; color: string; icon: string }> = {
-  'mejor-empleo':        { key: 'mejorEmpleo',        color: 'teal',   icon: '💼' },
-  'better-jobs':         { key: 'mejorEmpleo',        color: 'teal',   icon: '💼' },
-  'emprendimiento':      { key: 'emprendimiento',     color: 'coral',  icon: '🚀' },
-  'entrepreneurship':    { key: 'emprendimiento',     color: 'coral',  icon: '🚀' },
-  'comunidad-de-cuidado':{ key: 'comunidadDeCuidado', color: 'gold',   icon: '👨‍👩‍👧‍👦' },
-  'caring-community':    { key: 'comunidadDeCuidado', color: 'gold',   icon: '👨‍👩‍👧‍👦' },
-  'navegador-familiar':  { key: 'navegadorFamiliar',  color: 'purple', icon: '🧭' },
-  'family-navigator':    { key: 'navegadorFamiliar',  color: 'purple', icon: '🧭' },
-  'empoderados':         { key: 'empoderados',        color: 'navy',   icon: '⚖️' },
-  'empowered':           { key: 'empoderados',        color: 'navy',   icon: '⚖️' },
+const programMap: Record<string, { key: string; color: string }> = {
+  'mejor-empleo':        { key: 'mejorEmpleo',        color: 'teal' },
+  'better-jobs':         { key: 'mejorEmpleo',        color: 'teal' },
+  'emprendimiento':      { key: 'emprendimiento',     color: 'coral' },
+  'entrepreneurship':    { key: 'emprendimiento',     color: 'coral' },
+  'comunidad-de-cuidado':{ key: 'comunidadDeCuidado', color: 'gold' },
+  'caring-community':    { key: 'comunidadDeCuidado', color: 'gold' },
+  'navegador-familiar':  { key: 'navegadorFamiliar',  color: 'purple' },
+  'family-navigator':    { key: 'navegadorFamiliar',  color: 'purple' },
+  'empoderados':         { key: 'empoderados',        color: 'navy' },
+  'empowered':           { key: 'empoderados',        color: 'navy' },
 };
 
 /* ------------------------------------------------------------------ */
@@ -92,7 +92,7 @@ export default async function ProgramPage({
     notFound();
   }
 
-  const { key: programKey, color, icon } = program;
+  const { key: programKey, color } = program;
   const t = await getTranslations('programs');
 
   /* Build the 4 steps for StepProcess from separate title/desc keys */
@@ -137,7 +137,7 @@ export default async function ProgramPage({
     <>
       {/* ── 1. Hero ─────────────────────────────────────────────── */}
       <Hero
-        title={`${icon} ${t(`${programKey}.name`)}`}
+        title={t(`${programKey}.name`)}
         subtitle={t(`${programKey}.heroTagline`)}
         ctaText={t(`${programKey}.cta`)}
         ctaHref="#start"

@@ -1,13 +1,8 @@
 import Link from 'next/link';
 import { getTranslations, getLocale } from 'next-intl/server';
+import { hubIcons } from '@/components/Icons';
 
-const services = [
-  { key: 'education', icon: '\uD83C\uDF93' },
-  { key: 'workforce', icon: '\uD83D\uDCAA' },
-  { key: 'healthcare', icon: '\uD83C\uDFE5' },
-  { key: 'entrepreneurship', icon: '\uD83D\uDCA1' },
-  { key: 'youth', icon: '\uD83D\uDC66' },
-] as const;
+const serviceKeys = ['education', 'workforce', 'healthcare', 'entrepreneurship', 'youth'] as const;
 
 export default async function HubPage({
   params,
@@ -66,16 +61,18 @@ export default async function HubPage({
           </h2>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ key, icon }) => (
+            {serviceKeys.map((key) => {
+              const Icon = hubIcons[key];
+              return (
               <article
                 key={key}
                 className="rounded-xl bg-white p-8 shadow-md transition-shadow duration-300 hover:shadow-lg"
               >
                 <div
-                  className="mb-4 text-4xl"
+                  className="mb-4 text-oasis-teal"
                   aria-hidden="true"
                 >
-                  {icon}
+                  <Icon className="h-10 w-10" />
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-oasis-navy">
                   {t(key)}
@@ -84,7 +81,8 @@ export default async function HubPage({
                   {t(`${key}Desc`)}
                 </p>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

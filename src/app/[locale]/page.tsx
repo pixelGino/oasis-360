@@ -5,6 +5,7 @@ import ProgramCard from '@/components/ProgramCard';
 import StatBar from '@/components/StatBar';
 import CTABanner from '@/components/CTABanner';
 import PartnerStrip from '@/components/PartnerStrip';
+import { programIcons, hubIcons } from '@/components/Icons';
 
 export default async function HomePage() {
   const t = await getTranslations();
@@ -13,48 +14,21 @@ export default async function HomePage() {
 
   /* -- Program data -------------------------------------------------- */
   const programs = [
-    {
-      key: 'mejorEmpleo' as const,
-      color: 'teal' as const,
-      icon: '\u{1F4BC}',
-      slug: isEn ? 'better-jobs' : 'mejor-empleo',
-    },
-    {
-      key: 'emprendimiento' as const,
-      color: 'coral' as const,
-      icon: '\u{1F680}',
-      slug: isEn ? 'entrepreneurship' : 'emprendimiento',
-    },
-    {
-      key: 'comunidadDeCuidado' as const,
-      color: 'gold' as const,
-      icon: '\u{1F468}\u200D\u{1F469}\u200D\u{1F467}\u200D\u{1F466}',
-      slug: isEn ? 'caring-community' : 'comunidad-de-cuidado',
-    },
-    {
-      key: 'navegadorFamiliar' as const,
-      color: 'purple' as const,
-      icon: '\u{1F9ED}',
-      slug: isEn ? 'family-navigator' : 'navegador-familiar',
-    },
-    {
-      key: 'empoderados' as const,
-      color: 'navy' as const,
-      icon: '\u2696\uFE0F',
-      slug: isEn ? 'empowered' : 'empoderados',
-    },
+    { key: 'mejorEmpleo' as const, color: 'teal' as const, slug: isEn ? 'better-jobs' : 'mejor-empleo' },
+    { key: 'emprendimiento' as const, color: 'coral' as const, slug: isEn ? 'entrepreneurship' : 'emprendimiento' },
+    { key: 'comunidadDeCuidado' as const, color: 'gold' as const, slug: isEn ? 'caring-community' : 'comunidad-de-cuidado' },
+    { key: 'navegadorFamiliar' as const, color: 'purple' as const, slug: isEn ? 'family-navigator' : 'navegador-familiar' },
+    { key: 'empoderados' as const, color: 'navy' as const, slug: isEn ? 'empowered' : 'empoderados' },
   ];
 
   const programsBase = isEn ? 'programs' : 'programas';
 
   /* -- Hub features -------------------------------------------------- */
-  const hubFeatures = [
-    { icon: t('home.hubEducationIcon'), label: t('home.hubEducation') },
-    { icon: t('home.hubWorkforceIcon'), label: t('home.hubWorkforce') },
-    { icon: t('home.hubHealthcareIcon'), label: t('home.hubHealthcare') },
-    { icon: t('home.hubEntrepreneurshipIcon'), label: t('home.hubEntrepreneurship') },
-    { icon: t('home.hubYouthIcon'), label: t('home.hubYouth') },
-  ];
+  const hubFeatureKeys = ['education', 'workforce', 'healthcare', 'entrepreneurship', 'youth'] as const;
+  const hubFeatures = hubFeatureKeys.map((key) => ({
+    key,
+    label: t(`home.hub${key.charAt(0).toUpperCase() + key.slice(1)}`),
+  }));
 
   /* -- Stats --------------------------------------------------------- */
   const stats = [
@@ -148,20 +122,23 @@ export default async function HomePage() {
           </h2>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {programs.map((p) => (
+            {programs.map((p) => {
+              const IconComponent = programIcons[p.key];
+              return (
               <div key={p.key} className="flex flex-col">
                 <ProgramCard
                   name={t(`programs.${p.key}.name`)}
                   tagline={t(`programs.${p.key}.tagline`)}
                   href={`/${locale}/${programsBase}/${p.slug}`}
                   color={p.color}
-                  icon={p.icon}
+                  icon={<IconComponent className="h-7 w-7" />}
                 />
                 <p className="mt-2 text-center text-xs font-medium text-oasis-navy/50">
                   Partner: {t(`programs.${p.key}.partner`)}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -185,19 +162,22 @@ export default async function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
-            {hubFeatures.map((feature) => (
+            {hubFeatures.map((feature) => {
+              const HubIcon = hubIcons[feature.key];
+              return (
               <div
-                key={feature.label}
+                key={feature.key}
                 className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm transition-shadow duration-200 hover:shadow-md"
               >
-                <span className="mb-3 text-3xl" aria-hidden="true">
-                  {feature.icon}
-                </span>
+                <div className="mb-3 text-oasis-teal" aria-hidden="true">
+                  <HubIcon className="h-8 w-8" />
+                </div>
                 <span className="text-sm font-semibold leading-snug text-oasis-navy md:text-base">
                   {feature.label}
                 </span>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-10 text-center">
