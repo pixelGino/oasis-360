@@ -232,8 +232,18 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* ---------- Right side: lang toggle + hamburger ---------- */}
+          {/* ---------- Right side: Participantes + lang toggle + hamburger ---------- */}
           <div className="flex items-center gap-2">
+            {/* Participantes CTA */}
+            <a
+              href="https://psi.sociants.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden min-h-[44px] items-center rounded-full bg-oasis-gold px-5 py-2 text-sm font-semibold text-oasis-navy shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md lg:inline-flex"
+            >
+              {isEs ? 'Participantes' : 'Participants'}
+            </a>
+
             {/* Language toggle */}
             <Link
               href={`/${altLocale}`}
@@ -350,8 +360,17 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Divider + language link in drawer */}
-          <div className="mt-6 border-t border-[#021939]/10 pt-6">
+          {/* Divider + Participantes + language link in drawer */}
+          <div className="mt-6 flex flex-col gap-3 border-t border-[#021939]/10 pt-6">
+            <a
+              href="https://psi.sociants.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="flex min-h-[44px] items-center justify-center rounded-full bg-oasis-gold px-4 py-2 text-sm font-semibold text-oasis-navy transition-colors hover:bg-oasis-gold/90"
+            >
+              {isEs ? 'Participantes' : 'Participants'}
+            </a>
             <Link
               href={`/${altLocale}`}
               onClick={() => setMobileOpen(false)}
