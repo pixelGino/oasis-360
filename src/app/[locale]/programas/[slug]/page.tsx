@@ -41,6 +41,14 @@ const iconBgMap: Record<string, string> = {
   navy:   'bg-oasis-navy/10',
 };
 
+const statBorderMap: Record<string, string> = {
+  teal:   'border-oasis-teal',
+  coral:  'border-oasis-coral',
+  gold:   'border-oasis-gold',
+  purple: 'border-oasis-purple',
+  navy:   'border-oasis-navy',
+};
+
 /* ------------------------------------------------------------------ */
 /*  Static params for all valid slug combinations                      */
 /* ------------------------------------------------------------------ */
@@ -87,17 +95,40 @@ export default async function ProgramPage({
   const { key: programKey, color, icon } = program;
   const t = await getTranslations('programs');
 
-  /* Build the 4 steps for StepProcess */
+  /* Build the 4 steps for StepProcess from separate title/desc keys */
   const steps = [1, 2, 3, 4].map((n) => ({
     number: String(n),
-    title: t(`${programKey}.step${n}`).split(' — ')[0],
-    description: t(`${programKey}.step${n}`).includes(' — ')
-      ? t(`${programKey}.step${n}`).split(' — ').slice(1).join(' — ')
-      : t(`${programKey}.step${n}`),
+    title: t(`${programKey}.step${n}Title`),
+    description: t(`${programKey}.step${n}Desc`),
   }));
 
   /* Services array */
   const services = t.raw(`${programKey}.services`) as string[];
+
+  /* Challenge stats (optional — not every program has them) */
+  let challengeStats: { value: string; label: string }[] | null = null;
+  try {
+    const raw = t.raw(`${programKey}.challengeStats`);
+    if (Array.isArray(raw)) {
+      challengeStats = raw as { value: string; label: string }[];
+    }
+  } catch {
+    /* key does not exist for this program — ignore */
+  }
+
+  /* navegadorFamiliar-specific data */
+  const isNavegadorFamiliar = programKey === 'navegadorFamiliar';
+  let familyStats: { value: string; label: string }[] | null = null;
+  if (isNavegadorFamiliar) {
+    try {
+      const raw = t.raw(`${programKey}.familyStats`);
+      if (Array.isArray(raw)) {
+        familyStats = raw as { value: string; label: string }[];
+      }
+    } catch {
+      /* ignore */
+    }
+  }
 
   /* Contact href based on locale */
   const contactHref = locale === 'es' ? `/${locale}/contacto` : `/${locale}/contact`;
@@ -107,32 +138,38 @@ export default async function ProgramPage({
       {/* ── 1. Hero ─────────────────────────────────────────────── */}
       <Hero
         title={`${icon} ${t(`${programKey}.name`)}`}
-        subtitle={t(`${programKey}.tagline`)}
+        subtitle={t(`${programKey}.heroTagline`)}
         ctaText={t(`${programKey}.cta`)}
         ctaHref="#start"
       />
 
-      {/* ── 2. Partner Badge ────────────────────────────────────── */}
-      <section className="w-full bg-white py-6">
-        <div className="mx-auto flex justify-center px-6">
-          <span className="inline-flex items-center gap-2 rounded-full bg-oasis-teal-light px-5 py-2 text-sm font-medium text-oasis-teal">
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-1.053M15 19.128ZM18 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9-3.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-              />
-            </svg>
-            {locale === 'es' ? 'Liderado por' : 'Led by'}:{' '}
-            <strong>{t(`${programKey}.partner`)}</strong>
-          </span>
+      {/* ── 2. Hero Body + Partner Badge ───────────────────────── */}
+      <section className="w-full bg-white py-12 md:py-16">
+        <div className="mx-auto max-w-3xl px-6">
+          <p className="text-center text-lg leading-relaxed text-oasis-navy/90">
+            {t(`${programKey}.heroBody`)}
+          </p>
+
+          <div className="mt-8 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-oasis-teal-light px-5 py-2 text-sm font-medium text-oasis-teal">
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-1.053M15 19.128ZM18 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9-3.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+              {locale === 'es' ? 'Liderado por' : 'Led by'}:{' '}
+              <strong>{t(`${programKey}.partner`)}</strong>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -148,6 +185,25 @@ export default async function ProgramPage({
               {t(`${programKey}.challenge`)}
             </p>
           </div>
+
+          {/* Challenge stats (if available) */}
+          {challengeStats && challengeStats.length > 0 && (
+            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {challengeStats.map((stat, index) => (
+                <div
+                  key={index}
+                  className={`rounded-xl border-t-4 ${statBorderMap[color]} bg-white p-5 text-center shadow-sm`}
+                >
+                  <p className={`text-2xl font-bold ${checkColorMap[color]}`}>
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-sm text-oasis-navy/70">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -165,7 +221,59 @@ export default async function ProgramPage({
         </div>
       </section>
 
-      {/* ── 5. What You Get ─────────────────────────────────────── */}
+      {/* ── 5. Two Service Levels (navegadorFamiliar only) ──────── */}
+      {isNavegadorFamiliar && (
+        <section className="w-full bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="mb-12 text-center text-3xl font-bold text-oasis-navy md:text-4xl">
+              {t(`${programKey}.serviceLevelsTitle`)}
+            </h2>
+
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              {/* Service Level 1 */}
+              <div className="rounded-2xl border border-oasis-purple/20 bg-oasis-purple/5 p-8">
+                <h3 className="text-xl font-bold text-oasis-purple">
+                  {t(`${programKey}.serviceLevel1Title`)}
+                </h3>
+                <p className="mt-4 leading-relaxed text-oasis-navy/80">
+                  {t(`${programKey}.serviceLevel1Desc`)}
+                </p>
+              </div>
+
+              {/* Service Level 2 */}
+              <div className="rounded-2xl border border-oasis-purple/20 bg-oasis-purple/5 p-8">
+                <h3 className="text-xl font-bold text-oasis-purple">
+                  {t(`${programKey}.serviceLevel2Title`)}
+                </h3>
+                <p className="mt-4 leading-relaxed text-oasis-navy/80">
+                  {t(`${programKey}.serviceLevel2Desc`)}
+                </p>
+              </div>
+            </div>
+
+            {/* Family stats */}
+            {familyStats && familyStats.length > 0 && (
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
+                {familyStats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="inline-flex flex-col items-center rounded-full bg-oasis-purple/10 px-6 py-3"
+                  >
+                    <span className="text-lg font-bold text-oasis-purple">
+                      {stat.value}
+                    </span>
+                    <span className="text-xs text-oasis-navy/70">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ── 6. What You Get ─────────────────────────────────────── */}
       <section className="w-full bg-white py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="mb-10 text-center text-3xl font-bold text-oasis-navy md:text-4xl">
@@ -205,7 +313,7 @@ export default async function ProgramPage({
         </div>
       </section>
 
-      {/* ── 6. Who It's For ─────────────────────────────────────── */}
+      {/* ── 7. Who It's For ─────────────────────────────────────── */}
       <section className="w-full bg-oasis-teal-light py-16 md:py-20">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
@@ -218,16 +326,12 @@ export default async function ProgramPage({
         </div>
       </section>
 
-      {/* ── 7. CTA Banner ───────────────────────────────────────── */}
+      {/* ── 8. CTA Banner ───────────────────────────────────────── */}
       <div id="start">
         <CTABanner
-          title={t(`${programKey}.cta`)}
-          subtitle={
-            locale === 'es'
-              ? 'Da el primer paso hacia nuevas oportunidades.'
-              : 'Take the first step toward new opportunities.'
-          }
-          buttonText={locale === 'es' ? 'Contáctanos' : 'Contact Us'}
+          title={t(`${programKey}.ctaTitle`)}
+          subtitle={t(`${programKey}.ctaBody`)}
+          buttonText={t(`${programKey}.cta`)}
           buttonHref={contactHref}
         />
       </div>

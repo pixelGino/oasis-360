@@ -29,7 +29,6 @@ export function Footer() {
 
   const quickLinks = [
     { label: t('nav.home'), href: `/${locale}` },
-    { label: t('nav.programs'), href: `/${locale}/${programsBasePath}/${programSlugs[0]}` },
     { label: t('nav.hub'), href: `/${locale}/hub` },
     { label: t('nav.partners'), href: `/${locale}/${locale === 'es' ? 'socios' : 'partners'}` },
     { label: t('nav.contact'), href: `/${locale}/${locale === 'es' ? 'contacto' : 'contact'}` },
@@ -46,8 +45,8 @@ export function Footer() {
       <div className="h-1 bg-oasis-teal" />
 
       <div className="mx-auto max-w-7xl px-6 py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
-          {/* Column 1: Logo + Description */}
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-8">
+          {/* Column 0: Logo + Tagline */}
           <div>
             <Link href={`/${locale}`} aria-label="OASIS 360 Home">
               <Image
@@ -58,15 +57,31 @@ export function Footer() {
                 className="mb-4 brightness-0 invert"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-white/80">
-              OASIS 360 is a community initiative connecting residents of San
-              Juan (00923/00924) with quality employment, training,
-              entrepreneurship, childcare, and family support to build real
-              pathways to economic mobility.
+            <p className="text-sm font-medium leading-relaxed text-white/90">
+              {t('footer.tagline')}
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 1: Programs */}
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+              {t('footer.programs')}
+            </h3>
+            <ul className="space-y-2">
+              {programs.map((program) => (
+                <li key={program.href}>
+                  <Link
+                    href={program.href}
+                    className="text-sm text-white/80 transition-colors hover:text-oasis-gold"
+                  >
+                    {program.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 2: Quick Links (Resources) */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
               {t('footer.quickLinks')}
@@ -85,23 +100,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Programs */}
+          {/* Column 3: Contact */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              {t('footer.programs')}
+              {t('footer.contactCol')}
             </h3>
-            <ul className="space-y-2">
-              {programs.map((program) => (
-                <li key={program.href}>
-                  <Link
-                    href={program.href}
-                    className="text-sm text-white/80 transition-colors hover:text-oasis-gold"
-                  >
-                    {program.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <address className="space-y-2 not-italic">
+              <p className="text-sm text-white/80">Villa Prades, San Juan, PR</p>
+              <p className="text-sm text-white/80">ZIP: 00923, 00924</p>
+            </address>
           </div>
         </div>
 
@@ -114,7 +121,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="mt-4 text-center text-xs text-white/50">
-          &copy; 2026 OASIS 360 &mdash; PSI. {t('footer.rights')}
+          {t('footer.copyright')} {t('footer.rights')}
         </p>
       </div>
     </footer>

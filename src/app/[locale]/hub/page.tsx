@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getTranslations, getLocale } from 'next-intl/server';
 
 const services = [
@@ -102,6 +103,14 @@ export default async function HubPage({
             {t('zipCodes')}
           </p>
 
+          {/* CTA link */}
+          <Link
+            href={locale === 'es' ? `/${locale}/contacto` : `/${locale}/contact`}
+            className="mt-6 inline-flex items-center text-lg font-semibold text-oasis-teal transition-colors duration-200 hover:text-oasis-navy"
+          >
+            {t('visitCta')} &rarr;
+          </Link>
+
           {/* Map placeholder */}
           <div className="mx-auto mt-10 flex h-64 max-w-lg items-center justify-center rounded-xl bg-oasis-gray shadow-inner">
             <div className="flex flex-col items-center gap-3 text-oasis-navy/50">
@@ -126,7 +135,7 @@ export default async function HubPage({
                 />
               </svg>
               <span className="text-sm font-medium">
-                {locale === 'es' ? 'Mapa pr\u00f3ximamente' : 'Map coming soon'}
+                {t('mapPlaceholder')}
               </span>
             </div>
           </div>

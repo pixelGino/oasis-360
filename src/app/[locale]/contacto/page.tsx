@@ -8,6 +8,7 @@ export default async function ContactoPage({
 }) {
   await params;
   const t = await getTranslations('contact');
+  const tHub = await getTranslations('hub');
   const locale = await getLocale();
 
   return (
@@ -113,7 +114,7 @@ export default async function ContactoPage({
                     />
                   </svg>
                   <span className="text-sm font-medium">
-                    {locale === 'es' ? 'Mapa pr\u00f3ximamente' : 'Map coming soon'}
+                    {tHub('mapPlaceholder')}
                   </span>
                 </div>
               </div>

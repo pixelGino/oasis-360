@@ -27,6 +27,8 @@ export default async function SociosPage({
   const locale = await getLocale();
   const contactPath = locale === 'es' ? `/${locale}/contacto` : `/${locale}/contact`;
 
+  const govPartnersList = t('govPartners').split(', ');
+
   return (
     <>
       {/* ── Header ── */}
@@ -74,6 +76,26 @@ export default async function SociosPage({
               </p>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* ── Government & Community Partners ── */}
+      <section className="bg-oasis-gray px-6 py-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="mb-10 text-3xl font-bold text-oasis-navy md:text-4xl">
+            {t('govPartnersTitle')}
+          </h2>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {govPartnersList.map((partner) => (
+              <span
+                key={partner}
+                className="rounded-full bg-white px-5 py-2 text-sm font-medium text-oasis-navy shadow-sm"
+              >
+                {partner}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

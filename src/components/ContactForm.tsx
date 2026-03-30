@@ -8,12 +8,12 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const programKeys = [
-    'mejorEmpleo',
+    'empleo',
     'emprendimiento',
-    'comunidadDeCuidado',
-    'navegadorFamiliar',
-    'empoderados',
-    'other',
+    'cuido',
+    'apoyoFamiliar',
+    'serSocio',
+    'otro',
   ] as const;
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -102,7 +102,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Program of Interest */}
+      {/* How can we help */}
       <div>
         <label
           htmlFor="contact-program"
