@@ -119,10 +119,22 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Copyright */}
-        <p className="mt-4 text-center text-xs text-white/50">
-          {t('footer.copyright')} {t('footer.rights')}
-        </p>
+        {/* Copyright + Mutiny Labs credit */}
+        <div className="mt-4 flex flex-col items-center gap-2 text-xs text-white/50 sm:flex-row sm:justify-center sm:gap-1">
+          <span>{t('footer.copyright')} {t('footer.rights')}</span>
+          <span className="hidden sm:inline">·</span>
+          <span>
+            Built by{' '}
+            <a
+              href="https://mutiny-labs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-white/70 transition-colors hover:text-oasis-gold"
+            >
+              Mutiny Labs
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   );
