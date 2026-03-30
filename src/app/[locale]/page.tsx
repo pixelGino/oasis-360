@@ -58,7 +58,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-black/40" />
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-8 text-center sm:px-10 md:px-6">
           <Image
             src="/logoSquare.png"
             alt="OASIS 360"
@@ -68,21 +68,21 @@ export default async function HomePage() {
             priority
           />
 
-          <h1 className="text-5xl font-bold uppercase tracking-wide text-white md:text-7xl">
+          <h1 className="text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl md:text-7xl">
             {t('hero.tagline')}
           </h1>
 
-          <p className="mt-6 text-lg text-white/90 md:text-xl">
+          <p className="mt-4 text-base text-white/90 sm:mt-5 sm:text-lg md:mt-6 md:text-xl">
             {t('hero.subtitle')}
           </p>
 
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/70">
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 sm:mt-4 sm:text-base">
             {t('hero.body')}
           </p>
 
           <Link
             href="#programas"
-            className="mt-10 inline-flex items-center rounded-full bg-oasis-gold px-8 py-4 text-base font-semibold text-oasis-navy shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-oasis-gold focus:ring-offset-2 focus:ring-offset-black"
+            className="mt-8 inline-flex items-center rounded-full bg-oasis-gold px-6 py-3 text-sm font-semibold text-oasis-navy shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-oasis-gold focus:ring-offset-2 focus:ring-offset-black sm:mt-10 sm:px-8 sm:py-4 sm:text-base"
           >
             {t('hero.cta')}
           </Link>
@@ -105,9 +105,9 @@ export default async function HomePage() {
       </section>
 
       {/* -- 2. What is OASIS 360 ------------------------------------- */}
-      <section className="w-full bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid items-center gap-12 md:grid-cols-2">
+      <section className="w-full bg-white py-14 sm:py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-8 sm:px-10 md:px-6">
+          <div className="grid items-center gap-8 sm:gap-12 md:grid-cols-2">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <Image
                 src="/community-program.webp"
@@ -118,10 +118,10 @@ export default async function HomePage() {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
+              <h2 className="text-2xl font-bold text-oasis-navy sm:text-3xl md:text-4xl">
                 {t('home.whatIsTitle')}
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-gray-600">
+              <p className="mt-4 text-base leading-relaxed text-gray-600 sm:mt-6 sm:text-lg">
                 {t('home.whatIsText')}
               </p>
             </div>
@@ -130,13 +130,13 @@ export default async function HomePage() {
       </section>
 
       {/* -- 3. Programs Grid ----------------------------------------- */}
-      <section id="programas" className="w-full bg-oasis-gray py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="mb-12 text-center text-3xl font-bold text-oasis-navy md:text-4xl">
+      <section id="programas" className="w-full bg-oasis-gray py-12 sm:py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-8 sm:px-10 md:px-6">
+          <h2 className="mb-8 text-center text-2xl font-bold text-oasis-navy sm:mb-12 sm:text-3xl md:text-4xl">
             {t('home.programsTitle')}
           </h2>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {programs.map((p) => {
               const IconComponent = programIcons[p.key];
               return (
@@ -162,17 +162,17 @@ export default async function HomePage() {
       <StatBar stats={stats} />
 
       {/* -- 5. The Hub ----------------------------------------------- */}
-      <section className="w-full bg-oasis-teal-light py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-12 grid items-center gap-10 md:grid-cols-2">
+      <section className="w-full bg-oasis-teal-light py-12 sm:py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-8 sm:px-10 md:px-6">
+          <div className="mx-auto mb-8 grid items-center gap-8 sm:mb-12 sm:gap-10 md:grid-cols-2">
             <div>
-            <h2 className="text-3xl font-bold text-oasis-navy md:text-4xl">
+            <h2 className="text-2xl font-bold text-oasis-navy sm:text-3xl md:text-4xl">
               {t('home.hubTitle')}
             </h2>
-            <p className="mt-3 text-lg font-medium text-oasis-navy/90">
+            <p className="mt-2 text-base font-medium text-oasis-navy/90 sm:mt-3 sm:text-lg">
               {t('home.hubSubtitle')}
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-oasis-navy/80">
+            <p className="mt-3 text-base leading-relaxed text-oasis-navy/80 sm:mt-4 sm:text-lg">
               {t('home.hubText')}
             </p>
             </div>
@@ -187,13 +187,13 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-5">
             {hubFeatures.map((feature) => {
               const HubIcon = hubIcons[feature.key];
               return (
               <div
                 key={feature.key}
-                className="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm transition-shadow duration-200 hover:shadow-md"
+                className="flex flex-col items-center rounded-xl bg-white p-4 text-center shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-6"
               >
                 <div className="mb-3 text-oasis-teal" aria-hidden="true">
                   <HubIcon className="h-8 w-8" />

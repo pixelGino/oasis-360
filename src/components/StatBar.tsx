@@ -39,10 +39,10 @@ export default function StatBar({ stats }: StatBarProps) {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-oasis-teal-light py-12 md:py-16"
+      className="w-full bg-oasis-teal-light py-10 sm:py-12 md:py-16"
       aria-label="Key statistics"
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 md:grid-cols-4 md:gap-12">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-8 sm:gap-8 sm:px-10 md:grid-cols-4 md:gap-12 md:px-6">
         {stats.map((stat, index) => (
           <div
             key={stat.label}
@@ -53,10 +53,10 @@ export default function StatBar({ stats }: StatBarProps) {
             }`}
             style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
           >
-            <span className="text-3xl font-extrabold text-oasis-navy md:text-4xl lg:text-5xl">
+            <span className="text-2xl font-extrabold text-oasis-navy sm:text-3xl md:text-4xl lg:text-5xl">
               {stat.value}
             </span>
-            <span className="mt-2 text-sm font-medium text-oasis-navy/70 md:text-base">
+            <span className="mt-1 text-xs font-medium text-oasis-navy/70 sm:mt-2 sm:text-sm md:text-base">
               {stat.label}
             </span>
           </div>
