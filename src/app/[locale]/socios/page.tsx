@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 
 const partners = [
-  { name: 'Vimenti', descKey: 'vimentiDesc', accent: 'oasis-teal', logo: '/partners/vimenti.webp' },
-  { name: 'Project Makers', descKey: 'projectMakersDesc', accent: 'oasis-coral', logo: '/partners/project-makers.webp' },
-  { name: 'IDJ', descKey: 'idjDesc', accent: 'oasis-purple', logo: '/partners/idj.webp' },
+  { name: 'Vimenti', descKey: 'vimentiDesc', accent: 'oasis-teal', logo: '/partners/vimenti.png' },
+  { name: 'Project Makers', descKey: 'projectMakersDesc', accent: 'oasis-coral', logo: '/partners/project-makers.png' },
+  { name: 'IDJ', descKey: 'idjDesc', accent: 'oasis-purple', logo: '/partners/idj.png' },
   { name: 'Goodwill / Excel Center', descKey: 'goodwillDesc', accent: 'oasis-gold', logo: null },
   { name: 'PSI', descKey: 'psiDesc', accent: 'oasis-navy', logo: '/partners/psi.svg' },
 ] as const;
