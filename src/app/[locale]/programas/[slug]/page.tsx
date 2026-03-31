@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Hero from '@/components/Hero';
 import StepProcess from '@/components/StepProcess';
 import CTABanner from '@/components/CTABanner';
+import BetterJobsPage from '@/components/BetterJobsPage';
 
 /* ------------------------------------------------------------------ */
 /*  Slug → translation-key mapping                                     */
@@ -95,6 +96,59 @@ export default async function ProgramPage({
   const { key: programKey, color } = program;
   const t = await getTranslations('programs');
 
+  /* Contact href based on locale */
+  const contactHref = locale === 'es' ? `/${locale}/contacto` : `/${locale}/contact`;
+
+  /* ── Custom layout for Better Jobs / Mejor Empleo ────────────── */
+  if (programKey === 'mejorEmpleo') {
+    const raw = t.raw(programKey) as Record<string, unknown>;
+    return (
+      <BetterJobsPage
+        t={{
+          heroTagline: raw.heroTagline as string,
+          heroBody: raw.heroBody as string,
+          heroCta: raw.heroCta as string,
+          isForYouTitle: raw.isForYouTitle as string,
+          isForYouBody: raw.isForYouBody as string,
+          isForYouFree: raw.isForYouFree as string,
+          careerAreasTitle: raw.careerAreasTitle as string,
+          careerAreasSubtitle: raw.careerAreasSubtitle as string,
+          careerHealthcare: raw.careerHealthcare as string,
+          careerHealthcareDesc: raw.careerHealthcareDesc as string,
+          careerConstruction: raw.careerConstruction as string,
+          careerConstructionDesc: raw.careerConstructionDesc as string,
+          careerTechnology: raw.careerTechnology as string,
+          careerTechnologyDesc: raw.careerTechnologyDesc as string,
+          careerManufacturing: raw.careerManufacturing as string,
+          careerManufacturingDesc: raw.careerManufacturingDesc as string,
+          howTitle: raw.howTitle as string,
+          step1Title: raw.step1Title as string,
+          step1Desc: raw.step1Desc as string,
+          step2Title: raw.step2Title as string,
+          step2Desc: raw.step2Desc as string,
+          step3Title: raw.step3Title as string,
+          step3Desc: raw.step3Desc as string,
+          step4Title: raw.step4Title as string,
+          step4Desc: raw.step4Desc as string,
+          servicesTitle: raw.servicesTitle as string,
+          services: raw.services as string[],
+          statsTitle: raw.statsTitle as string,
+          stats: raw.stats as { value: string; label: string }[],
+          ctaTitle: raw.ctaTitle as string,
+          ctaBody: raw.ctaBody as string,
+          cta: raw.cta as string,
+          ctaAttribution: raw.ctaAttribution as string,
+          crossLinkCare: raw.crossLinkCare as string,
+          crossLinkCareTarget: raw.crossLinkCareTarget as string,
+          crossLinkFamily: raw.crossLinkFamily as string,
+          crossLinkFamilyTarget: raw.crossLinkFamilyTarget as string,
+        }}
+        locale={locale}
+        contactHref={contactHref}
+      />
+    );
+  }
+
   /* Build the 4 steps for StepProcess from separate title/desc keys */
   const steps = [1, 2, 3, 4].map((n) => ({
     number: String(n),
@@ -129,9 +183,6 @@ export default async function ProgramPage({
       /* ignore */
     }
   }
-
-  /* Contact href based on locale */
-  const contactHref = locale === 'es' ? `/${locale}/contacto` : `/${locale}/contact`;
 
   return (
     <>
