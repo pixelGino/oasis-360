@@ -294,10 +294,6 @@ export default function BetterJobsPage({ t, locale, contactHref }: BetterJobsPag
             height={120}
             className="h-12 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           />
-          {/* JFF logo placeholder — use text until asset is available */}
-          <span className="text-sm font-bold tracking-tight text-oasis-navy/40">
-            JFF
-          </span>
         </div>
       </section>
 
